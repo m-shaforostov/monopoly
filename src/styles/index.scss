@@ -1,6 +1,36 @@
 $body-color: slateblue;
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   color: $body-color;
   font-family: sans-serif;
+
+  .field {
+    width: 13*50px;
+    height: 13*50px;
+    border: 1px solid gray;
+    position: relative;
+  }
+
+  .cell {
+    position: absolute;
+    border: 1px solid gray;
+    background-color: white;
+    margin-right: -1px;
+  }
+
+  .cell-color-top {
+    position: absolute;
+    height: 10px;
+    width: 100%;
+  }
+
+  .cell-color-left {
+    position: absolute;
+    height: 100%;
+    width: 10px;
+  }
 }
