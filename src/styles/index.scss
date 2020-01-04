@@ -79,6 +79,13 @@ body {
       width: 100%;
       text-align: center;
     }
+    .city {
+      position: absolute;
+      top: 10px;
+      width: 100%;
+      text-align: center;
+      word-break: break-word;
+    }
   }
 
   .left {

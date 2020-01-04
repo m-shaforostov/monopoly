@@ -1,0 +1,5 @@
+<div class="cell-content {{laneClass}}">
+    <div class="{{colorClass}}" style="background-color: {{color}}"></div>
+    <div class="price">{{price}}</div>
+    <div class="city">{{cityName}}</div>
+</div>

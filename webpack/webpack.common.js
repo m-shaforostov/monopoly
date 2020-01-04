@@ -47,6 +47,10 @@ module.exports = {
           }
         }
       },
+      {
+        test: /\.hbr$/,
+        loader: 'handlebars-loader'
+      }
     ]
   }
 };

@@ -1,10 +1,10 @@
 import $ from 'jquery';
 import _ from 'lodash';
-import Handlebars from 'handlebars';
 import '../styles/index.scss';
 import field from './data/field';
+import countries from './data/countries';
+import cellTemplate from './templates/cell.hbr';
 
-$('body').append($('<div>').addClass('field')); //
 
 const cellsArray = [];
 $('.table-field td').each((index, cell) => {
@@ -15,34 +15,21 @@ $('.table-field td').each((index, cell) => {
 cellsArray.forEach((cell, num) => {
     const fieldConfig = field.cells.find(item => item.index === num+1);
     if (!fieldConfig) return;
-    const laneClass =  _.get(fieldConfig, 'lane', '');
-    const cellDiv = $('<div>').addClass(`cell-content ${laneClass}`);
 
-    const cellColor = $('<div>').addClass(fieldConfig.colorClass);
-    cellColor.css('backgroundColor', fieldConfig.color);
-    cellDiv.append(cellColor);
+    const country = countries.ukraine;
+    const city = country.find(item => item.index === num+1);
 
-    const cellPrice = $('<div>').addClass('price').text(fieldConfig.price);
-    cellDiv.append(cellPrice);
+    const laneClass = _.get(fieldConfig, 'lane', '');
+    const { colorClass, color, price } = fieldConfig;
+    const cityName = _.get(city, 'name', '');
+
+    const cellDiv = cellTemplate({
+        laneClass,
+        colorClass,
+        color,
+        price,
+        cityName,
+    });
 
     $(cell).append(cellDiv);
 });
-
-field.cells.forEach((cell) => {
-    $('.field').append(
-        $('<div>').css({
-            width: cell.width,
-            height: cell.height,
-            top: cell.top,
-            left: cell.left,
-            right: cell.right,
-        }).addClass('cell')
-            .append(
-                $('<div>').css({
-                    backgroundColor: cell.color,
-                }).addClass(cell.colorClass)
-            )
-    );
-});
-
-console.log(JSON.stringify(field));
