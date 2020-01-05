@@ -1,12 +1,13 @@
 const SMALL_SIDE = '50';
 const LARGE_SIDE = '100';
-const COLORS = ['white', '#b400ff', 'lightblue', 'magenta', 'orange', 'red', 'lightgreen', 'green', 'blue'];
+const COLORS = ['null', '#b400ff', 'lightblue', 'magenta', 'orange', 'red', 'lightgreen', 'green', 'blue'];
 
 const field = {
       cells: [
             {
                   index: 1,
                   colorClass: 'cell-color-top',
+                  lane: 'out',
                   group: 0,
             },
             {
@@ -19,6 +20,7 @@ const field = {
             {
                   index: 3,
                   colorClass: 'cell-color-top',
+                  lane: 'bottom',
                   group: 0,
             },
             {
@@ -31,6 +33,7 @@ const field = {
             {
                   index: 5,
                   colorClass: 'cell-color-top',
+                  lane: 'bottom',
                   group: 0,
             },
             {
@@ -57,6 +60,7 @@ const field = {
             {
                   index: 9,
                   colorClass: 'cell-color-top',
+                  lane: 'bottom',
                   group: 0,
             },
             {
@@ -69,6 +73,7 @@ const field = {
             {
                   index: 11,
                   colorClass: 'cell-color-top',
+                  lane: 'out',
                   group: 0,
             },
             {
@@ -116,6 +121,7 @@ const field = {
             {
                   index: 18,
                   colorClass: 'cell-color-right',
+                  lane: 'bottom',
                   group: 0,
             },
             {
@@ -135,6 +141,7 @@ const field = {
             {
                   index: 21,
                   colorClass: 'cell-color-top',
+                  lane: 'out',
                   group: 0,
             },
             {
@@ -147,6 +154,7 @@ const field = {
             {
                   index: 23,
                   colorClass: 'cell-color-bottom',
+                  lane: 'bottom',
                   group: 0,
             },
             {
@@ -201,6 +209,7 @@ const field = {
             {
                   index: 31,
                   colorClass: 'cell-color-top',
+                  lane: 'out',
                   group: 0,
             },
             {
@@ -213,6 +222,7 @@ const field = {
             {
                   index: 33,
                   colorClass: 'cell-color-left',
+                  lane: 'bottom',
                   group: 0,
             },
             {
@@ -239,6 +249,7 @@ const field = {
             {
                   index: 37,
                   colorClass: 'cell-color-left',
+                  lane: 'left',
                   group: 0,
             },
             {
@@ -251,6 +262,7 @@ const field = {
             {
                   index: 39,
                   colorClass: 'cell-color-left',
+                  lane: 'bottom',
                   group: 0,
             },
             {

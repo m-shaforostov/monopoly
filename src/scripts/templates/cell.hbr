@@ -2,4 +2,5 @@
     <div class="{{colorClass}}" style="background-color: {{color}}"></div>
     <div class="price">{{price}}</div>
     <div class="city">{{cityName}}</div>
+    <div class="image"><img src="{{image}}" alt=""></div>
 </div>

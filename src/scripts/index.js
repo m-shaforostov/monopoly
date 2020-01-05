@@ -4,7 +4,7 @@ import '../styles/index.scss';
 import field from './data/field';
 import countries from './data/countries';
 import cellTemplate from './templates/cell.hbr';
-
+import gameplay from './gameplay';
 
 const cellsArray = [];
 $('.table-field td').each((index, cell) => {
@@ -22,6 +22,7 @@ cellsArray.forEach((cell, num) => {
     const laneClass = _.get(fieldConfig, 'lane', '');
     const { colorClass, color, price } = fieldConfig;
     const cityName = _.get(city, 'name', '');
+    const image = _.get(city, 'image', '');
 
     const cellDiv = cellTemplate({
         laneClass,
@@ -29,7 +30,11 @@ cellsArray.forEach((cell, num) => {
         color,
         price,
         cityName,
+        image,
     });
 
     $(cell).append(cellDiv);
 });
+
+const game = gameplay.startGame();
+
