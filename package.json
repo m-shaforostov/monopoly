@@ -46,6 +46,9 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.7.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-latest": "^6.24.1",
+    "bluebird": "^3.7.2",
     "core-js": "^3.6.0",
     "handlebars": "^4.5.3",
     "jquery": "^3.4.1",

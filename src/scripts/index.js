@@ -6,13 +6,14 @@ import countries from './data/countries';
 import cellTemplate from './templates/cell.hbr';
 import gameplay from './gameplay';
 
-const cellsArray = [];
+
+window.cellsArray = [];
 $('.table-field td').each((index, cell) => {
     const id = $(cell).data('id');
-    cellsArray[id-1] = cell;
+    window.cellsArray[id-1] = cell;
 });
 
-cellsArray.forEach((cell, num) => {
+window.cellsArray.forEach((cell, num) => {
     const fieldConfig = field.cells.find(item => item.index === num+1);
     if (!fieldConfig) return;
 
@@ -37,4 +38,5 @@ cellsArray.forEach((cell, num) => {
 });
 
 const game = gameplay.startGame();
+gameplay.play();
 
