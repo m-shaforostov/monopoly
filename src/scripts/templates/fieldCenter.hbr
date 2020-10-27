@@ -1,0 +1,29 @@
+<div class="field-center">
+    <div class="dices-number">
+        <div class="dice-number1">{{dice1}}</div>
+        <div class="dice-number2">{{dice2}}</div>
+    </div>
+    <div class="quest-chest">
+        <div class="quest"><img src="{{imgQuestion}}"></div>
+        <div class="chest"><img src="{{imgChest}}"></div>
+    </div>
+    <button class="start">Start</button>
+    <div class="allInvent">
+        <div class="inventTop">
+            <div class="playerInvent">
+                <img src="{{image}}" class="1">
+            </div>
+            <div class="playerInvent", id="2">
+
+            </div>
+        </div>
+        <div class="inventBottom">
+            <div class="playerInvent", id="3">
+
+            </div>
+            <div class="playerInvent", id="4">
+
+            </div>
+        </div>
+    </div>
+</div>

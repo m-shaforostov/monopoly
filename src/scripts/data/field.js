@@ -82,6 +82,7 @@ const field = {
                   group: 3,
                   lane: 'left',
                   price: 140,
+
             },
             {
                   index: 13,
@@ -121,7 +122,7 @@ const field = {
             {
                   index: 18,
                   colorClass: 'cell-color-right',
-                  lane: 'bottom',
+                  lane: 'left',
                   group: 0,
             },
             {
@@ -222,7 +223,7 @@ const field = {
             {
                   index: 33,
                   colorClass: 'cell-color-left',
-                  lane: 'bottom',
+                  lane: 'right',
                   group: 0,
             },
             {
@@ -249,7 +250,7 @@ const field = {
             {
                   index: 37,
                   colorClass: 'cell-color-left',
-                  lane: 'left',
+                  lane: 'right',
                   group: 0,
             },
             {

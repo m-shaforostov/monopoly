@@ -6,6 +6,18 @@ import countries from './data/countries';
 import cellTemplate from './templates/cell.hbr';
 import gameplay from './gameplay';
 
+function handleCityClick(event) {
+debugger;
+    const url = $(event.currentTarget).data('city-url');
+    $('.modal-photo img').attr('src', url);
+    $('.modal-dark').show();
+}
+
+function handleCloseModal() {
+    $('.modal-dark').hide();
+}
+
+$('.modal-dark').on('click', handleCloseModal);
 
 window.cellsArray = [];
 $('.table-field td').each((index, cell) => {
@@ -23,6 +35,7 @@ window.cellsArray.forEach((cell, num) => {
     const laneClass = _.get(fieldConfig, 'lane', '');
     const { colorClass, color, price } = fieldConfig;
     const cityName = _.get(city, 'name', '');
+    const cityUrl = _.get(city, 'cityUrl', '');
     const image = _.get(city, 'image', '');
 
     const cellDiv = cellTemplate({
@@ -31,12 +44,21 @@ window.cellsArray.forEach((cell, num) => {
         color,
         price,
         cityName,
+        cityUrl,
         image,
     });
 
-    $(cell).append(cellDiv);
+    const cellDiv$ = $(cellDiv);
+
+    $(cell).append(cellDiv$);
+
+    cellDiv$.on('click', handleCityClick);
 });
 
 const game = gameplay.startGame();
-gameplay.play();
+
+$('.start').on('click', gameplay.makeTurn);
+
+// gameplay.play();
+
 

@@ -1,5 +1,5 @@
-import imgPlayer1 from '../../images/player1.jpg';
-import imgPlayer2 from '../../images/player2.jpg';
+import imgPlayer1 from '../../images/player/player1.png';
+import imgPlayer2 from '../../images/player/player2.png';
 
 export default [
     {
